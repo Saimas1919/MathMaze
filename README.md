@@ -24,3 +24,35 @@ It provides a seed-based, block encryption system with reversible chaos transfor
 
 ```bash
 dotnet add package MathMaze --version 1.0.0-beta1
+
+
+Quick Usage Example
+using System;
+using System.Text;
+using System.Numerics;
+using System.Security.Cryptography;
+using MathMaze.Security;
+
+class Example
+{
+    static void Main()
+    {
+        string text = "Hello, MathMaze!";
+        byte[] message = Encoding.UTF8.GetBytes(text);
+
+        // Generate random 256-bit seed
+        byte[] seedBytes = new byte[32];
+        RandomNumberGenerator.Fill(seedBytes);
+        BigInteger seed = new BigInteger(seedBytes, isUnsigned: true, isBigEndian: false);
+
+        // Encrypt
+        byte[] cipher = MathMazeCore.EncryptWithSeed(message, seed);
+
+        // Decrypt
+        byte[] recovered = MathMazeCore.DecryptWithSeed(cipher, seed);
+        string recoveredText = Encoding.UTF8.GetString(recovered);
+
+        Console.WriteLine(recoveredText); // Output: "Hello, MathMaze!"
+    }
+}
+
