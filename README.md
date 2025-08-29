@@ -19,6 +19,14 @@ It provides a seed-based, block encryption system with reversible chaos transfor
 - Fully in-memory, portable C# library
 
 ---
+
+
+
+## Installation via NuGet
+
+```bash
+dotnet add package MathMaze --version 1.0.0-beta1
+
 ## Quick Usage Example
 
 ```csharp
@@ -50,9 +58,3 @@ class Example
         Console.WriteLine(recoveredText); // Output: "Hello, MathMaze!"
     }
 }
-
-
-## Installation via NuGet
-
-```bash
-dotnet add package MathMaze --version 1.0.0-beta1
