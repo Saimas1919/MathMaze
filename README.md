@@ -24,9 +24,10 @@ It provides a seed-based, block encryption system with reversible chaos transfor
 
 ```bash
 dotnet add package MathMaze --version 1.0.0-beta1
+ ```
 
-
-Quick Usage Example
+## Quick Usage Example
+```csharp
 using System;
 using System.Text;
 using System.Numerics;
@@ -55,4 +56,4 @@ class Example
         Console.WriteLine(recoveredText); // Output: "Hello, MathMaze!"
     }
 }
-
+```
