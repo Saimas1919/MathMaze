@@ -1,0 +1,26 @@
+# MathMaze SDK
+
+**MathMaze v1.0.0-beta1** – Experimental Novel Cryptography Library
+
+MathMaze is an experimental cryptography library implemented in C#.  
+It provides a seed-based, block encryption system with reversible chaos transformations, GF(256) arithmetic, and trapdoor key encapsulation.
+
+> ⚠️ **Beta Version:** Use for research/testing purposes. Not recommended for production security.
+
+---
+
+## Features
+
+- Seed-based encryption/decryption (`MathMazeCore`)
+- Quantum-resistant trapdoor key encapsulation (`Trapdoor`)
+- Reversible chaos transformations (`Chaos`)
+- GF(256) arithmetic operations (`GF256`)
+- Block-based encryption with CBC-like chaining
+- Fully in-memory, portable C# library
+
+---
+
+## Installation via NuGet
+
+```bash
+dotnet add package MathMaze --version 1.0.0-beta1

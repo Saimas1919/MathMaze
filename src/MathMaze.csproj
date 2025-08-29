@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <!-- Multi-target frameworks for wider compatibility -->
+    <TargetFrameworks>net6.0;net7.0;net8.0</TargetFrameworks>
+
+    <!-- Library output for SDK -->
+    <OutputType>Library</OutputType>
+
+    <!-- C# 11 implicit usings -->
+    <ImplicitUsings>enable</ImplicitUsings>
+
+    <!-- Nullable reference types enabled -->
+    <Nullable>enable</Nullable>
+
+    <!-- NuGet package metadata -->
+    <PackageId>MathMaze</PackageId>
+    <Version>1.0.0-beta1</Version>
+    <Authors>Saimas1919</Authors>
+    <Company>SilicaArts</Company>
+    <Description>MathMaze v1.0.0-beta1 - Experimental novel cryptography library for research and testing.</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <RepositoryUrl>https://github.com/Saimas1919/MathMaze</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/Saimas1919/MathMaze</PackageProjectUrl>
+    <PackageReleaseNotes>Initial beta release v1.0.0-beta1</PackageReleaseNotes>
+
+    <!-- Generate NuGet package on build -->
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+
+    <!-- Generate XML documentation for consumers -->
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Include any XML docs in the package -->
+    <None Include="bin\Debug\net8.0\MathMaze.xml" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+</Project>
